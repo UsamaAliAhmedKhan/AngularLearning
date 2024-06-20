@@ -1,15 +1,16 @@
 import { Component, EventEmitter, input, Input, output, Output } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-user';
 import { User } from './user.model';
+import { CardComponent } from "../sharedUI/card/card.component";
 
 const randomNumber = Math.floor(Math.random() * DUMMY_USERS.length)
 
 @Component({
-  selector: 'app-user',
-  standalone: true,
-  imports: [],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.css'
+    selector: 'app-user',
+    standalone: true,
+    templateUrl: './user.component.html',
+    styleUrl: './user.component.css',
+    imports: [CardComponent]
 })
 export class UserComponent {
   // selectedUser = signal(DUMMY_USERS[randomNumber])
