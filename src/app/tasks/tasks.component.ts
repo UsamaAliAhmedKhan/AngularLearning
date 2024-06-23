@@ -24,10 +24,6 @@ export class TasksComponent {
     return this.tasksService.selectedTasks(this.userId)
   }
 
-  onCompleteTask(id:string){
-    this.tasksService.deleteTask(id)
-  }
-
   onClickAddNewTask(){
     this.isAddTask = true;
   }
